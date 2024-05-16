@@ -1,0 +1,32 @@
+---
+// Import necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import ContactSection from "@components/sections/ContactSection.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Contact | ${SITE.title}`;
+---
+
+<!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
+<MainLayout
+  title={pageTitle}
+  structuredData={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://sysforge.uk/contact",
+        "url": "https://sysforge.uk/contact",
+        "name": "Contact Us | SysForge",
+        "description":
+        "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.",
+        "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://sysforge.uk",
+        "name": "SysForge",
+        "description":
+        "SysForge offers top-tier software tools and expert services to meet all your project needs.",
+        },
+        "inLanguage": "en-US"
+        }}
+>
+  <ContactSection />
+</MainLayout>

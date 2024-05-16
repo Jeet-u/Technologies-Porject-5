@@ -1,0 +1,29 @@
+{
+  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "faqs": [
+    {
+      "question": "What programming languages and frameworks are covered in the Starter Kit?",
+      "answer": "The Starter Kit includes resources and tools for learning and practicing popular programming languages such as JavaScript, Python, HTML/CSS, and more. Additionally, it provides introductory materials and hands-on exercises for popular frameworks like React, Vue.js, and Django. It's designed to provide a comprehensive foundation for aspiring developers to explore various programming languages and frameworks."
+    },
+    {
+      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox for advanced programming tools and networking resources?",
+      "answer": "Yes, you can seamlessly upgrade to the Professional Toolbox at any time to gain access to a broader range of advanced programming tools, libraries, and frameworks. Additionally, the Professional Toolbox includes networking resources and materials for aspiring network administrators. You'll also receive priority customer support and exclusive content to further enhance your development and networking experience."
+    },
+    {
+      "question": "Are there discounts available for bulk orders of programming tools and networking equipment through the Professional Toolbox plan?",
+      "answer": "Professional Toolbox members can enjoy exclusive discounts on bulk orders of programming tools and networking equipment. The discounts may vary depending on the volume of the order. Feel free to reach out to us to discuss your requirements, and we'll provide you with a customized discount structure."
+    },
+    {
+      "question": "What level of customer support can I expect as a SysForge customer?",
+      "answer": "As a SysForge customer, you'll receive dedicated email support. The Starter Kit comes with standard support, while upgrading to the Professional Toolbox grants you priority support. With priority support, you can expect faster response times and specialized assistance tailored to your programming and networking needs."
+    },
+    {
+      "question": "How up-to-date are the online programming resources, tutorials, and networking guides provided by SysForge?",
+      "answer": "At SysForge, we continuously update our online programming resources, tutorials, and networking guides to reflect the latest trends and technologies in the industry. Our goal is to provide comprehensive and up-to-date material that caters to programmers and network administrators of all skill levels."
+    },
+    {
+      "question": "Does SysForge offer services for large-scale development projects and network infrastructure?",
+      "answer": "Yes, SysForge provides Enterprise Solutions tailored for companies undertaking large-scale development projects and network infrastructure setups. Our services include consultation, planning, and supply of high-quality tools, resources, and networking equipment. Additionally, we offer staffing solutions to meet the demands of significant development and networking endeavors. Contact us today for a customized quote."
+    }
+  ]
+}

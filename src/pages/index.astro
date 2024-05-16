@@ -1,0 +1,145 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSection from "@components/sections/landing/HeroSection.astro";
+import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
+import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
+import PricingSection from "@components/sections/pricing/PricingSection.astro";
+import FAQ from "@components/sections/FAQ.astro";
+import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
+import heroImage from "@images/hero-image.avif";
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
+import pricing from "@data/pricing.json";
+import featureImage from "@images/features-image.avif";
+import construction from "@images/construction-image.avif";
+import tools from "@images/automated-tools.avif";
+import dashboard from "@images/dashboard-image.avif";
+
+
+const avatarSrcs: Array<string> = [
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+];
+---
+
+<MainLayout>
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Explore on GitHub"
+    url="https://github.com/Jeet-u/"
+  />
+
+  <HeroSection
+    title=`Unlock the Potential of Your Web and Development Projects with <span
+        class="text-yellow-500 dark:text-yellow-400">SysForge</span>`
+    subTitle="Elevate your projects with cutting-edge tools and expert support tailored for dynamic web applications, interactive games, and more."
+    primaryBtn="Get Started"
+    primaryBtnURL="/products"
+    secondaryBtn="Contact Sales Team"
+    secondaryBtnURL="/contact"
+    withReview={true}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.8</span> / 5`
+    starCount={4}
+    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    src={heroImage}
+    alt="Stack of SysForge product boxes containing assorted development tools"
+  />
+
+  <ClientsSection
+    title="Trusted by Leading Innovators"
+    subTitle="Join industry giants who rely on SysForge to power their digital initiatives."
+  />
+
+  <FeaturesGeneral
+    title="Crafting Dynamic Web Experiences"
+    subTitle="SysForge empowers you to create dynamic web applications that engage users and deliver immersive experiences. From interactive web pages to real-time data visualization, the possibilities are endless."
+    src={featureImage}
+    alt="SysForge products in floating boxes"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=`Tailor <span class="text-yellow-500 dark:text-yellow-400">SysForge Technologies</span> to Suit Your Development Needs.`
+    tabs={[
+    {
+    heading: "Game Development",
+    content:
+    "Leverage SysForge's game development tools to create captivating gaming experiences. Whether you're building mobile games or immersive virtual reality worlds, our platform provides the flexibility and power you need to bring your ideas to life.",
+    svg: "automation",
+    src: tools,
+    alt: "Developers collaborating on game development",
+    first: true,
+    },
+    {
+    heading: "Dynamic Web Pages",
+    content:
+    "SysForge offers a wide range of features for building dynamic web pages that respond to user input and provide real-time updates. From interactive forms to dynamic content loading, our tools make it easy to create engaging web experiences.",
+    svg: "network",
+    src: dashboard,
+    alt: "Sustainable web development practices",
+    second: true,
+    },
+    {
+    heading: "Full Stack Solutions",
+    content:
+    "With SysForge's full stack solutions, you can streamline your development process and build end-to-end applications with ease. From front-end frameworks like React and Vue.js to back-end languages like Node.js and Python, our platform has everything you need to create modern web applications.",
+    svg: "devops",
+    src: construction,
+    alt: "Innovative development solutions",
+    },
+    ]}
+    />
+
+    <TestimonialsSection
+      title="Accelerate Your Development Projects"
+      subTitle="SysForge ensures rapid development with instant setup. Experience the speed of development redefined."
+      ;
+      testimonials={[
+             {
+             content:
+             "SysForge dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in web development and support!",
+             author: "Samantha Ruiz",
+             role: "Chief Operating Officer | DevelopIt Inc.",
+             avatarSrc:
+             "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+             },
+             ]}
+      statistics={[
+             {
+             count: "70k+",
+             description:
+             "customers equipped — from individual developers to major corporations",
+             },
+             {
+             count: "35%",
+             description:
+             "uptick in project efficiency with SysForge tools and services",
+             },
+             {
+             count: "15.3%",
+             description:
+             "reduction in maintenance costs reported by long-term clients",
+             },
+             {
+             count: "2x",
+             description: "quicker development using innovative solutions",
+             },
+             ]}
+    />
+
+    <PricingSection pricing={pricing} />
+
+    <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+
+    <HeroSectionAlt
+      title="Let's Build Together"
+      subTitle="SysForge is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
+      url="https://github.com/Jeet-u"
+    />
+</MainLayout>

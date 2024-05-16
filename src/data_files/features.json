@@ -1,0 +1,22 @@
+[
+  {
+    "heading": "Frontend Development",
+    "content": "Explore the latest tools and techniques in frontend development to create captivating user interfaces and delightful user experiences.",
+    "svg": "code"
+  },
+  {
+    "heading": "Backend Development",
+    "content": "Master backend technologies and frameworks to build robust, scalable, and secure web applications that handle complex business logic.",
+    "svg": "server"
+  },
+  {
+    "heading": "DevOps Practices",
+    "content": "Learn essential DevOps practices to optimize development workflows, automate deployments, and ensure reliability and performance of web services.",
+    "svg": "cog"
+  },
+  {
+    "heading": "System Administration",
+    "content": "Gain expertise in system administration to manage servers, networks, and infrastructure effectively, ensuring optimal performance and security.",
+    "svg": "network"
+  }
+]

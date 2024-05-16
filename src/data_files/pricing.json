@@ -1,0 +1,38 @@
+
+{
+  "title": "Advanced Solutions for Modern Development",
+  "subTitle": "Elevate your projects with SysForge's innovative plans designed for cutting-edge development.",
+  "badge": "Premium Quality",
+  "thirdOption": "Enterprise Solutions?",
+  "btnText": "Request a Custom Quote",
+
+  "starterKit": {
+    "name": "Starter Package",
+    "description": "Entry-level package for aspiring developers",
+    "price": "$99",
+    "cents": ".99",
+    "billingFrequency": "USD / month",
+    "features": [
+      "Access to latest web development tools",
+      "Cutting-edge programming resources",
+      "Advanced sysadmin support"
+    ],
+    "purchaseBtnTitle": "Get Started",
+    "purchaseLink": "#"
+  },
+
+  "professionalToolbox": {
+    "name": "Professional Package",
+    "description": "Ideal for businesses seeking advanced solutions",
+    "price": "$199",
+    "cents": ".99",
+    "billingFrequency": "USD / month",
+    "features": [
+      "Exclusive access to bleeding-edge technologies",
+      "Comprehensive programming libraries",
+      "24/7 dedicated sysadmin support"
+    ],
+    "purchaseBtnTitle": "Upgrade Now",
+    "purchaseLink": "#"
+  }
+}
