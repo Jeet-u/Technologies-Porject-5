@@ -1,7 +1,7 @@
 ---
 import ThemeIcon from "@components/ThemeIcon.astro";
 import NavLink from "@components/ui/links/NavLink.astro";
-import Authentication from "./Authentication.astro";
+
 import enStrings from "@utils/navigation.ts";;
 import LanguagePicker from "@components/ui/LanguagePicker.astro";
 import BrandLogo from "@components/BrandLogo.astro";
@@ -87,7 +87,7 @@ const homeUrl = Astro.currentLocale === "es" ? "/es" : "/";
           <NavLink url={link.url} name={link.name} />
         ))}
 
-        <Authentication />
+
         <LanguagePicker />
         <!-- ThemeIcon component specifically for larger screens -->
         <span class="hidden md:inline-block">

@@ -7,30 +7,30 @@
   "btnText": "Request a Custom Quote",
 
   "starterKit": {
-    "name": "Starter Package",
-    "description": "Entry-level package for aspiring developers",
-    "price": "$99",
-    "cents": ".99",
-    "billingFrequency": "USD / month",
+    "name": "Professional Diagnosis",
+    "description": "Save money with an accurate diagnosis and fully guaranteed repairs",
+    "price": "$50",
+    "cents": ".00",
+    "billingFrequency":"USD",
     "features": [
-      "Access to latest web development tools",
-      "Cutting-edge programming resources",
-      "Advanced sysadmin support"
+      "A comprehensive analysis of your device with no risk of data loss",
+      "Expert Recommendations for the best repair options at the most competitive prices",
+      "Trust our service to extend the life of your device with the best solutions"
     ],
     "purchaseBtnTitle": "Get Started",
     "purchaseLink": "#"
   },
 
   "professionalToolbox": {
-    "name": "Professional Package",
-    "description": "Ideal for businesses seeking advanced solutions",
-    "price": "$199",
-    "cents": ".99",
-    "billingFrequency": "USD / month",
+    "name": "Premium Complete Repair",
+    "description": "Comprehensive service to restore yout device with quality and guarantee",
+    "price": "$99",
+    "cents": ".00",
+    "billingFrequency":"USD",
     "features": [
-      "Exclusive access to bleeding-edge technologies",
-      "Comprehensive programming libraries",
-      "24/7 dedicated sysadmin support"
+      "We use certified replacement parts to ensure the best performance for your device",
+      "Our skilled team provides precise and reliable repairs",
+      "Protect your device in top condition with our professional internal cleaning service"
     ],
     "purchaseBtnTitle": "Upgrade Now",
     "purchaseLink": "#"
