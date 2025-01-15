@@ -1,12 +1,10 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel";  // Usamos el adaptador correcto
+import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 
-// https://astro.build/config
 export default defineConfig({
-  // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://github.com/Jeet-u",
   image: {
     domains: ["images.unsplash.com"],
@@ -22,6 +20,11 @@ export default defineConfig({
     },
   },
   prefetch: true,
+  output: "server", // Habilitamos SSR
+  adapter: vercel({
+    edge: false, // Cambiar a true si quieres usar funciones Edge
+    split: false, // Agrupar funciones en un solo archivo
+  }),
   integrations: [
     tailwind(),
     sitemap({
@@ -38,6 +41,4 @@ export default defineConfig({
       brotli: true,
     }),
   ],
-  output: 'server',  // Esto permite rutas dinC!micas y funciones API
-  adapter: vercel(),  // Usamos el adaptador para Vercel
-})
+});
