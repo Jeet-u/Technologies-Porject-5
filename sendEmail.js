@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
-import 'dotenv/config';
 
+// FunciC3n para enviar correo
 const sendMail = async ({ firstName, lastName, email, phone, message }) => {
   console.log("Datos recibidos para enviar correo:", {
     firstName, lastName, email, phone, message
@@ -9,14 +9,14 @@ const sendMail = async ({ firstName, lastName, email, phone, message }) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      user: process.env.GMAIL_USER,  // Variable de entorno en Vercel
+      pass: process.env.GMAIL_PASS,  // Variable de entorno en Vercel
     },
   });
 
   const mailOptions = {
     from: email,
-    to: process.env.GMAIL_USER,
+    to: process.env.GMAIL_USER,  // AquC- se especifica la cuenta de destino
     subject: 'Nuevo mensaje de contacto',
     text: `
       Nombre: ${firstName} ${lastName}
