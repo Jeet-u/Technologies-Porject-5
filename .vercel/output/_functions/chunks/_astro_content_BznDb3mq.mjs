@@ -309,7 +309,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"insights":{"type":"content","entries":{"insight-1":"/src/content/insights/insight-1.md","insight-2":"/src/content/insights/insight-2.md","insight-3":"/src/content/insights/insight-3.md"}},"blog":{"type":"content","entries":{"en/post-1":"/src/content/blog/en/post-1.md","en/post-2":"/src/content/blog/en/post-2.md","en/post-3":"/src/content/blog/en/post-3.md"}}};
+lookupMap = {"insights":{"type":"content","entries":{"insight-1":"/src/content/insights/insight-1.md","insight-3":"/src/content/insights/insight-3.md","insight-2":"/src/content/insights/insight-2.md"}},"blog":{"type":"content","entries":{"en/post-2":"/src/content/blog/en/post-2.md","en/post-1":"/src/content/blog/en/post-1.md","en/post-3":"/src/content/blog/en/post-3.md"}}};
 
 new Set(Object.keys(lookupMap));
 
