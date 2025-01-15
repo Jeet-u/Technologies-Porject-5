@@ -17,6 +17,7 @@
     "astro": "^5.1.7",
     "astro-compressor": "^0.4.1",
     "canvas": "^3.0.1",
+    "glob": "^9.3.5",
     "globby": "^14.0.1",
     "gsap": "^3.12.5",
     "html-minifier-terser": "^7.2.0",
