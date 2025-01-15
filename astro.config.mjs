@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel";  // Usamos el adaptador correcto aquC-
+import vercel from "@astrojs/vercel";  // Usamos el adaptador correcto
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
@@ -39,7 +39,7 @@ export default defineConfig({
       defaultLocale: "en",
       locales: {
         en: { label: "English", lang: "en" },
-        es: { label: "EspaC1ol", lang: "es" },
+        es: { label: "Espanio", lang: "es" },
       },
       sidebar: [
         {
@@ -98,5 +98,5 @@ export default defineConfig({
     }),
   ],
   output: 'server',  // Esto permite rutas dinC!micas y funciones API
-  adapter: vercel(),  // Usamos el adaptador correcto para Vercel
+  adapter: vercel(),  // Usamos el adaptador para Vercel
 });
