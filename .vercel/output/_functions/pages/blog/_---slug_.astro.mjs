@@ -5,7 +5,7 @@ import { $ as $$Icon, S as SITE, a as $$MainLayout } from '../../chunks/MainLayo
 import { f as formatDate, $ as $$AvatarBlogLarge, c as capitalize } from '../../chunks/AvatarBlogLarge_BKuQUSw5.mjs';
 import { $ as $$Image } from '../../chunks/_astro_assets_foqUXNTe.mjs';
 import 'clsx';
-import { g as getCollection } from '../../chunks/_astro_content_Ctp9YyPm.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_BJr_vgCz.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro$3 = createAstro("https://github.com/Jeet-u");
