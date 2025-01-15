@@ -13,14 +13,14 @@
       "use": "@astro/renderer-vercel"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/src/functions/$1.js"
+      "source": "/api/(.*)",
+      "destination": "/src/functions/$1.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/src/$1"
+      "source": "/(.*)",
+      "destination": "/src/$1"
     }
   ],
   "headers": [
