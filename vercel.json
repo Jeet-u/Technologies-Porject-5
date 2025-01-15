@@ -3,21 +3,24 @@
   "builds": [
     {
       "src": "src/functions/**/*.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "runtime": "nodejs16.x"
+      }
     },
     {
       "src": "src/**/*.astro",
       "use": "@astro/renderer-vercel"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "destination": "/src/functions/$1.js"
+      "src": "/api/(.*)",
+      "dest": "/src/functions/$1.js"
     },
     {
-      "source": "/(.*)",
-      "destination": "/src/$1"
+      "src": "/(.*)",
+      "dest": "/src/$1"
     }
   ],
   "headers": [
