@@ -1,15 +1,15 @@
-import { Http2ServerResponse } from 'node:http2';
 import { R as ROUTE_TYPE_HEADER, n as REROUTE_DIRECTIVE_HEADER, o as decryptString, p as createSlotValueFromString, r as renderTemplate, d as renderComponent, D as DEFAULT_404_COMPONENT, q as renderSlotToString, e as renderJSX, t as chunkToString, v as isRenderInstruction, w as originPathnameSymbol, x as clientLocalsSymbol, y as clientAddressSymbol, z as ASTRO_VERSION, B as responseSentSymbol$1, C as renderPage, E as REWRITE_DIRECTIVE_HEADER_KEY, G as REWRITE_DIRECTIVE_HEADER_VALUE, H as renderEndpoint, I as REROUTABLE_STATUS_CODES } from './astro/server_CDlkp_ya.mjs';
-import { A as AstroError, u as i18nNoLocaleFoundInPath, v as appendForwardSlash, w as joinPaths, R as ResponseSentError, x as MiddlewareNoDataOrNextCalled, y as MiddlewareNotAResponse, G as GetStaticPathsRequired, z as InvalidGetStaticPathsReturn, B as InvalidGetStaticPathsEntry, C as GetStaticPathsExpectedParams, H as GetStaticPathsInvalidRouteParam, J as trimSlashes, P as PageNumberParamNotFound, K as NoMatchingStaticPathFound, L as PrerenderDynamicEndpointPathCollide, Q as ReservedSlotName, S as removeTrailingForwardSlash, T as RewriteWithBodyUsed, W as LocalsNotAnObject, X as PrerenderClientAddressNotAvailable, Y as ClientAddressNotAvailable, Z as StaticClientAddressNotAvailable, _ as AstroResponseHeadersReassigned, $ as fileExtension, a0 as slash, p as prependForwardSlash } from './astro/assets-service_B8Ch1nCA.mjs';
 import { serialize, parse } from 'cookie';
 import { bold, red, yellow, dim, blue } from 'kleur/colors';
 import { g as getActionQueryString, d as deserializeActionResult, e as ensure404Route, a as default404Instance, D as DEFAULT_404_ROUTE, N as NOOP_MIDDLEWARE_FN } from './astro-designed-error-pages_XvdjH9-E.mjs';
 import 'es-module-lexer';
 import 'clsx';
-import 'fast-glob';
-import nodePath from 'node:path';
 import buffer from 'node:buffer';
 import crypto$1 from 'node:crypto';
+import { Http2ServerResponse } from 'node:http2';
+import { A as AstroError, u as i18nNoLocaleFoundInPath, v as appendForwardSlash, w as joinPaths, R as ResponseSentError, x as MiddlewareNoDataOrNextCalled, y as MiddlewareNotAResponse, G as GetStaticPathsRequired, z as InvalidGetStaticPathsReturn, B as InvalidGetStaticPathsEntry, C as GetStaticPathsExpectedParams, H as GetStaticPathsInvalidRouteParam, J as trimSlashes, P as PageNumberParamNotFound, K as NoMatchingStaticPathFound, L as PrerenderDynamicEndpointPathCollide, Q as ReservedSlotName, S as removeTrailingForwardSlash, T as RewriteWithBodyUsed, W as LocalsNotAnObject, X as PrerenderClientAddressNotAvailable, Y as ClientAddressNotAvailable, Z as StaticClientAddressNotAvailable, _ as AstroResponseHeadersReassigned, $ as fileExtension, a0 as slash, p as prependForwardSlash } from './astro/assets-service_B8Ch1nCA.mjs';
+import 'fast-glob';
+import nodePath from 'node:path';
 
 function shouldAppendForwardSlash(trailingSlash, buildFormat) {
   switch (trailingSlash) {
@@ -2689,6 +2689,8 @@ function asyncIterableToBodyProps(iterable) {
   };
 }
 
+apply();
+
 nodePath.posix.join;
 
 /**
@@ -2704,13 +2706,7 @@ const ASTRO_PATH_PARAM = 'x_astro_path';
 const ASTRO_LOCALS_HEADER = 'x-astro-locals';
 const ASTRO_MIDDLEWARE_SECRET_HEADER = 'x-astro-middleware-secret';
 
-// Run polyfills immediately so any dependent code can use the globals
-apply();
-// Won't throw if the virtual module is not available because it's not supported in
-// the users's astro version or if astro:env is not enabled in the project
-await import('./astro/env-setup_Cr6XTFvb.mjs')
-    .then((mod) => mod.setGetEnv((key) => process.env[key]))
-    .catch(() => { });
+// Keep at the top
 const createExports = (manifest, { middlewareSecret, skewProtection }) => {
     const app = new NodeApp(manifest);
     const handler = async (req, res) => {
