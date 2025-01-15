@@ -5,15 +5,12 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 
 export default defineConfig({
-  // URL base del sitio
   site: "https://github.com/Jeet-u",
-  
-  // Configuración para imágenes remotas
+
   image: {
     domains: ["images.unsplash.com"],
   },
 
-  // Configuración de localización (i18n)
   i18n: {
     defaultLocale: "en",
     locales: ["en", "es"],
@@ -25,25 +22,16 @@ export default defineConfig({
     },
   },
 
-  // Prefetch activado
   prefetch: true,
 
-  // Habilitar SSR
-  output: "server",
+  // Cambiar a 'static' para un sitio completamente estC!tico
+  output: "static",
 
-  // Configuración de build
-  build: {
-    client: "./dist/client",
-    server: "./dist/server",
-  },
-
-  // Adaptador y configuraciones adicionales
   adapter: vercel({
     edge: false,
     split: false,
   }),
 
-  // Integraciones
   integrations: [
     tailwind(),
     sitemap({
