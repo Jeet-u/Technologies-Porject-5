@@ -1,28 +1,15 @@
 import type { APIRoute } from "astro";
-import sharp from "sharp";
-import ico from "sharp-ico";
 import path from "node:path";
+import fs from "fs";
 
 const faviconSrc = path.resolve("src/images/icon.png");
 
 export const GET: APIRoute = async () => {
+  // Leemos la imagen desde el sistema de archivos
+  const favicon = fs.readFileSync(faviconSrc);
 
-  // Resize the image to multiple sizes
-  const sizes = [16, 32];
-
-  const buffers = await Promise.all(
-    sizes.map(async (size) => {
-      return await sharp(faviconSrc)
-        .resize(size)
-        .toFormat("png")
-        .toBuffer();
-    })
-  );
-
-  // Convert the image to an ICO file
-  const icoBuffer = ico.encode(buffers);
-
-  return new Response(icoBuffer, {
+  // Simplemente devolvemos la imagen como ICO
+  return new Response(favicon, {
     headers: { "Content-Type": "image/x-icon" },
   });
 };

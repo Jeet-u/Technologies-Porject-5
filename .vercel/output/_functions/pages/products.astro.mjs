@@ -1,9 +1,9 @@
 /* empty css                                 */
-import { c as createAstro, a as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_CDlkp_ya.mjs';
+import { c as createAstro, a as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_C95AHqwB.mjs';
 import 'kleur/colors';
-import { a as $$MainLayout, S as SITE } from '../chunks/MainLayout_BzxteYda.mjs';
-import { $ as $$PrimaryCTA } from '../chunks/PrimaryCTA_BaRpwE1w.mjs';
-import { $ as $$FeaturesStatsAlt, a as $$TestimonialsSectionAlt } from '../chunks/TestimonialsSectionAlt_DmpOonaN.mjs';
+import { a as $$MainLayout, S as SITE } from '../chunks/MainLayout_CTGQTF77.mjs';
+import { $ as $$PrimaryCTA } from '../chunks/PrimaryCTA_C9qxDUIH.mjs';
+import { $ as $$FeaturesStatsAlt, a as $$TestimonialsSectionAlt } from '../chunks/TestimonialsSectionAlt_CONpuetE.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro("https://github.com/Jeet-u");

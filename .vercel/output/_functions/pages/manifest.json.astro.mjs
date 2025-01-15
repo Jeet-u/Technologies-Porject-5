@@ -1,4 +1,4 @@
-import { a as getImage } from '../chunks/_astro_assets_nU-4n5ZH.mjs';
+import { c as getImage } from '../chunks/_astro_assets_foqUXNTe.mjs';
 import { i as icon } from '../chunks/icon_3Hrh_-be.mjs';
 export { renderers } from '../renderers.mjs';
 

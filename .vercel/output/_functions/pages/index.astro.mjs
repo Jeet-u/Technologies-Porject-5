@@ -1,9 +1,9 @@
 /* empty css                                 */
-import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderComponent, u as unescapeHTML, F as Fragment, k as renderSlot } from '../chunks/astro/server_CDlkp_ya.mjs';
+import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderComponent, u as unescapeHTML, F as Fragment, j as renderSlot, e as renderScript } from '../chunks/astro/server_C95AHqwB.mjs';
 import 'kleur/colors';
-import { $ as $$Icon, a as $$MainLayout } from '../chunks/MainLayout_BzxteYda.mjs';
-import { $ as $$Image } from '../chunks/_astro_assets_nU-4n5ZH.mjs';
-import { $ as $$PrimaryCTA } from '../chunks/PrimaryCTA_BaRpwE1w.mjs';
+import { $ as $$Icon, a as $$MainLayout } from '../chunks/MainLayout_CTGQTF77.mjs';
+import { $ as $$Image } from '../chunks/_astro_assets_foqUXNTe.mjs';
+import { $ as $$PrimaryCTA } from '../chunks/PrimaryCTA_C9qxDUIH.mjs';
 import 'clsx';
 import { f as featureImage } from '../chunks/features-image_4ZtAY4OE.mjs';
 export { renderers } from '../renderers.mjs';
@@ -229,7 +229,7 @@ const $$AnnouncementBanner = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$AnnouncementBanner;
   const { title, btnId, btnTitle, url } = Astro2.props;
-  return renderTemplate`${renderComponent($$result, "astro-banner", "astro-banner", { "btnId": btnId }, { "default": () => renderTemplate` ${maybeRenderHead()}<div class="fixed bottom-0 start-1/2 z-50 mx-auto w-full -translate-x-1/2 transform p-6 sm:max-w-4xl" role="region" aria-label="Informational Banner"> <div class="rounded-xl bg-neutral-800 bg-[url('/banner-pattern.svg')] bg-cover bg-center bg-no-repeat p-4 text-center shadow-sm dark:bg-neutral-200"> <div class="flex items-center justify-center"> <div class="ml-auto"> ${title && renderTemplate`<p class="me-2 inline-block font-medium text-neutral-50 dark:text-neutral-700"> ${title} </p>`} <a class="group inline-flex items-center gap-x-2 rounded-full border-2 border-neutral-50 backdrop-brightness-75 sm:backdrop-brightness-100 px-3 py-2 text-sm font-semibold text-neutral-50 transition duration-300 hover:border-neutral-100/70 hover:text-neutral-50/70 disabled:pointer-events-none disabled:opacity-50 dark:backdrop-brightness-100 white:border-neutral-700 white:text-neutral-700 dark:hover:border-neutral-700/70 dark:hover:text-neutral-800/70 dark:focus:outline-none"${addAttribute(url, "href")} target="_blank"> ${btnTitle} <svg class="size-4 flex-shrink-0 transition duration-300 group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg> </a> </div> <button type="button" class="ml-auto inline-flex items-center gap-x-2 rounded-full border border-transparent bg-gray-100 p-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-700 dark:text-neutral-50 dark:hover:bg-neutral-700/80 dark:hover:text-neutral-50 dark:focus:outline-none"${addAttribute(btnId, "id")}> <span class="sr-only">Dismiss</span> <svg class="size-5 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> </button> </div> </div> </div> ` })} `;
+  return renderTemplate`${renderComponent($$result, "astro-banner", "astro-banner", { "btnId": btnId }, { "default": () => renderTemplate` ${maybeRenderHead()}<div class="fixed bottom-0 start-1/2 z-50 mx-auto w-full -translate-x-1/2 transform p-6 sm:max-w-4xl" role="region" aria-label="Informational Banner"> <div class="rounded-xl bg-neutral-800 bg-[url('/banner-pattern.svg')] bg-cover bg-center bg-no-repeat p-4 text-center shadow-sm dark:bg-neutral-200"> <div class="flex items-center justify-center"> <div class="ml-auto"> ${title && renderTemplate`<p class="me-2 inline-block font-medium text-neutral-50 dark:text-neutral-700"> ${title} </p>`} <a class="group inline-flex items-center gap-x-2 rounded-full border-2 border-neutral-50 backdrop-brightness-75 sm:backdrop-brightness-100 px-3 py-2 text-sm font-semibold text-neutral-50 transition duration-300 hover:border-neutral-100/70 hover:text-neutral-50/70 disabled:pointer-events-none disabled:opacity-50 dark:backdrop-brightness-100 white:border-neutral-700 white:text-neutral-700 dark:hover:border-neutral-700/70 dark:hover:text-neutral-800/70 dark:focus:outline-none"${addAttribute(url, "href")} target="_blank"> ${btnTitle} <svg class="size-4 flex-shrink-0 transition duration-300 group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg> </a> </div> <button type="button" class="ml-auto inline-flex items-center gap-x-2 rounded-full border border-transparent bg-gray-100 p-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-700 dark:text-neutral-50 dark:hover:bg-neutral-700/80 dark:hover:text-neutral-50 dark:focus:outline-none"${addAttribute(btnId, "id")}> <span class="sr-only">Dismiss</span> <svg class="size-5 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> </button> </div> </div> </div> ` })} ${renderScript($$result, "/home/circuit/Technologies-Porject-5/src/components/ui/banners/AnnouncementBanner.astro?astro&type=script&index=0&lang.ts")}`;
 }, "/home/circuit/Technologies-Porject-5/src/components/ui/banners/AnnouncementBanner.astro", undefined);
 
 const heroImage = new Proxy({"src":"/_astro/hero-image.ChZZRo7L.avif","width":4505,"height":2552,"format":"avif"}, {
@@ -246,35 +246,10 @@ const heroImage = new Proxy({"src":"/_astro/hero-image.ChZZRo7L.avif","width":45
 					});
 
 const subTitle$1 = "Ask us anything about our brand and products, and get factual responses.";
-const faqs = [
-	{
-		question: "What programming languages and frameworks are covered in the Starter Kit?",
-		answer: "The Starter Kit includes resources and tools for learning and practicing popular programming languages such as JavaScript, Python, HTML/CSS, and more. Additionally, it provides introductory materials and hands-on exercises for popular frameworks like React, Vue.js, and Django. It's designed to provide a comprehensive foundation for aspiring developers to explore various programming languages and frameworks."
-	},
-	{
-		question: "Can I upgrade from the Starter Kit to the Professional Toolbox for advanced programming tools and networking resources?",
-		answer: "Yes, you can seamlessly upgrade to the Professional Toolbox at any time to gain access to a broader range of advanced programming tools, libraries, and frameworks. Additionally, the Professional Toolbox includes networking resources and materials for aspiring network administrators. You'll also receive priority customer support and exclusive content to further enhance your development and networking experience."
-	},
-	{
-		question: "Are there discounts available for bulk orders of programming tools and networking equipment through the Professional Toolbox plan?",
-		answer: "Professional Toolbox members can enjoy exclusive discounts on bulk orders of programming tools and networking equipment. The discounts may vary depending on the volume of the order. Feel free to reach out to us to discuss your requirements, and we'll provide you with a customized discount structure."
-	},
-	{
-		question: "What level of customer support can I expect as a SysForge customer?",
-		answer: "As a SysForge customer, you'll receive dedicated email support. The Starter Kit comes with standard support, while upgrading to the Professional Toolbox grants you priority support. With priority support, you can expect faster response times and specialized assistance tailored to your programming and networking needs."
-	},
-	{
-		question: "How up-to-date are the online programming resources, tutorials, and networking guides provided by SysForge?",
-		answer: "At SysForge, we continuously update our online programming resources, tutorials, and networking guides to reflect the latest trends and technologies in the industry. Our goal is to provide comprehensive and up-to-date material that caters to programmers and network administrators of all skill levels."
-	},
-	{
-		question: "Does SysForge offer services for large-scale development projects and network infrastructure?",
-		answer: "Yes, SysForge provides Enterprise Solutions tailored for companies undertaking large-scale development projects and network infrastructure setups. Our services include consultation, planning, and supply of high-quality tools, resources, and networking equipment. Additionally, we offer staffing solutions to meet the demands of significant development and networking endeavors. Contact us today for a customized quote."
-	}
-];
+const faqs = [{"question":"What programming languages and frameworks are covered in the Starter Kit?","answer":"The Starter Kit includes resources and tools for learning and practicing popular programming languages such as JavaScript, Python, HTML/CSS, and more. Additionally, it provides introductory materials and hands-on exercises for popular frameworks like React, Vue.js, and Django. It's designed to provide a comprehensive foundation for aspiring developers to explore various programming languages and frameworks."},{"question":"Can I upgrade from the Starter Kit to the Professional Toolbox for advanced programming tools and networking resources?","answer":"Yes, you can seamlessly upgrade to the Professional Toolbox at any time to gain access to a broader range of advanced programming tools, libraries, and frameworks. Additionally, the Professional Toolbox includes networking resources and materials for aspiring network administrators. You'll also receive priority customer support and exclusive content to further enhance your development and networking experience."},{"question":"Are there discounts available for bulk orders of programming tools and networking equipment through the Professional Toolbox plan?","answer":"Professional Toolbox members can enjoy exclusive discounts on bulk orders of programming tools and networking equipment. The discounts may vary depending on the volume of the order. Feel free to reach out to us to discuss your requirements, and we'll provide you with a customized discount structure."},{"question":"What level of customer support can I expect as a SysForge customer?","answer":"As a SysForge customer, you'll receive dedicated email support. The Starter Kit comes with standard support, while upgrading to the Professional Toolbox grants you priority support. With priority support, you can expect faster response times and specialized assistance tailored to your programming and networking needs."},{"question":"How up-to-date are the online programming resources, tutorials, and networking guides provided by SysForge?","answer":"At SysForge, we continuously update our online programming resources, tutorials, and networking guides to reflect the latest trends and technologies in the industry. Our goal is to provide comprehensive and up-to-date material that caters to programmers and network administrators of all skill levels."},{"question":"Does SysForge offer services for large-scale development projects and network infrastructure?","answer":"Yes, SysForge provides Enterprise Solutions tailored for companies undertaking large-scale development projects and network infrastructure setups. Our services include consultation, planning, and supply of high-quality tools, resources, and networking equipment. Additionally, we offer staffing solutions to meet the demands of significant development and networking endeavors. Contact us today for a customized quote."}];
 const faqs$1 = {
-	subTitle: subTitle$1,
-	faqs: faqs
+  subTitle: subTitle$1,
+  faqs,
 };
 
 const features = [
@@ -305,42 +280,16 @@ const subTitle = "Elevate your projects with SysForge's innovative plans designe
 const badge = "Premium Quality";
 const thirdOption = "Enterprise Solutions?";
 const btnText = "Request a Custom Quote";
-const starterKit = {
-	name: "Professional Diagnosis",
-	description: "Save money with an accurate diagnosis and fully guaranteed repairs",
-	price: "$50",
-	cents: ".00",
-	billingFrequency: "USD",
-	features: [
-		"A comprehensive analysis of your device with no risk of data loss",
-		"Expert Recommendations for the best repair options at the most competitive prices",
-		"Trust our service to extend the life of your device with the best solutions"
-	],
-	purchaseBtnTitle: "Get Started",
-	purchaseLink: "#"
-};
-const professionalToolbox = {
-	name: "Premium Complete Repair",
-	description: "Comprehensive service to restore yout device with quality and guarantee",
-	price: "$99",
-	cents: ".00",
-	billingFrequency: "USD",
-	features: [
-		"We use certified replacement parts to ensure the best performance for your device",
-		"Our skilled team provides precise and reliable repairs",
-		"Protect your device in top condition with our professional internal cleaning service"
-	],
-	purchaseBtnTitle: "Upgrade Now",
-	purchaseLink: "#"
-};
+const starterKit = {"name":"Professional Diagnosis","description":"Save money with an accurate diagnosis and fully guaranteed repairs","price":"$50","cents":".00","billingFrequency":"USD","features":["A comprehensive analysis of your device with no risk of data loss","Expert Recommendations for the best repair options at the most competitive prices","Trust our service to extend the life of your device with the best solutions"],"purchaseBtnTitle":"Get Started","purchaseLink":"#"};
+const professionalToolbox = {"name":"Premium Complete Repair","description":"Comprehensive service to restore yout device with quality and guarantee","price":"$99","cents":".00","billingFrequency":"USD","features":["We use certified replacement parts to ensure the best performance for your device","Our skilled team provides precise and reliable repairs","Protect your device in top condition with our professional internal cleaning service"],"purchaseBtnTitle":"Upgrade Now","purchaseLink":"#"};
 const pricing = {
-	title: title,
-	subTitle: subTitle,
-	badge: badge,
-	thirdOption: thirdOption,
-	btnText: btnText,
-	starterKit: starterKit,
-	professionalToolbox: professionalToolbox
+  title,
+  subTitle,
+  badge,
+  thirdOption,
+  btnText,
+  starterKit,
+  professionalToolbox,
 };
 
 const construction = new Proxy({"src":"/_astro/pexels.BbuZdalI.avif","width":3936,"height":2624,"format":"avif"}, {

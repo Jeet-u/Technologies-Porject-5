@@ -1,11 +1,11 @@
 /* empty css                                    */
-import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderComponent, F as Fragment } from '../../chunks/astro/server_CDlkp_ya.mjs';
+import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderComponent, e as renderScript, F as Fragment } from '../../chunks/astro/server_C95AHqwB.mjs';
 import 'kleur/colors';
-import { $ as $$Icon, S as SITE, a as $$MainLayout } from '../../chunks/MainLayout_BzxteYda.mjs';
-import { f as formatDate, $ as $$AvatarBlogLarge, c as capitalize } from '../../chunks/AvatarBlogLarge_DonSqUoJ.mjs';
-import { $ as $$Image } from '../../chunks/_astro_assets_nU-4n5ZH.mjs';
+import { $ as $$Icon, S as SITE, a as $$MainLayout } from '../../chunks/MainLayout_CTGQTF77.mjs';
+import { f as formatDate, $ as $$AvatarBlogLarge, c as capitalize } from '../../chunks/AvatarBlogLarge_BKuQUSw5.mjs';
+import { $ as $$Image } from '../../chunks/_astro_assets_foqUXNTe.mjs';
 import 'clsx';
-import { g as getCollection } from '../../chunks/_astro_content_BZvaPjMv.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_Ctp9YyPm.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro$3 = createAstro("https://github.com/Jeet-u");
@@ -17,7 +17,7 @@ const $$CardRelated = createComponent(($$result, $$props, $$slots) => {
 }, "/home/circuit/Technologies-Porject-5/src/components/ui/cards/CardRelated.astro", undefined);
 
 const $$Bookmark = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<button type="button" class="focus-visible:ring-secondary group inline-flex items-center rounded-lg p-2.5 text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:bg-neutral-100 focus:outline-none focus-visible:outline-none focus-visible:ring-1 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:bg-neutral-700" data-bookmark-button="bookmark-button"> ${renderComponent($$result, "Icon", $$Icon, { "name": "bookmark" })} </button> `;
+  return renderTemplate`${maybeRenderHead()}<button type="button" class="focus-visible:ring-secondary group inline-flex items-center rounded-lg p-2.5 text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:bg-neutral-100 focus:outline-none focus-visible:outline-none focus-visible:ring-1 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:bg-neutral-700" data-bookmark-button="bookmark-button"> ${renderComponent($$result, "Icon", $$Icon, { "name": "bookmark" })} </button> ${renderScript($$result, "/home/circuit/Technologies-Porject-5/src/components/ui/buttons/Bookmark.astro?astro&type=script&index=0&lang.ts")}`;
 }, "/home/circuit/Technologies-Porject-5/src/components/ui/buttons/Bookmark.astro", undefined);
 
 var __freeze = Object.freeze;
