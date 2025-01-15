@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import vercelStatic from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/serverless";  // Usamos el adaptador correcto aquC-
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
@@ -27,9 +27,9 @@ export default defineConfig({
     tailwind(),
     sitemap({
       i18n: {
-        defaultLocale: "en", // All urls that don't contain `es` after `https://github.com/jeet-u/` will be treated as default locale, i.e. `en`
+        defaultLocale: "en",
         locales: {
-          en: "en", // The `defaultLocale` value must present in `locales` keys
+          en: "en",
           es: "es",
         },
       },
@@ -39,13 +39,13 @@ export default defineConfig({
       defaultLocale: "en",
       locales: {
         en: { label: "English", lang: "en" },
-        es: { label: "Español", lang: "es" },
+        es: { label: "EspaC1ol", lang: "es" },
       },
       sidebar: [
         {
           label: "Quick Start Guides",
           translations: {
-            es: "Guías de Inicio Rápido",
+            es: "GuC-as de Inicio RC!pido",
           },
           autogenerate: { directory: "guides" },
         },
@@ -97,10 +97,6 @@ export default defineConfig({
       brotli: true,
     }),
   ],
-  output: "static",
-  experimental: {
-    clientPrerender: true,
-    directRenderScript: true,
-  },
-  adapter: vercelStatic(),
+  output: 'server',  // Esto permite rutas dinC!micas y funciones API
+  adapter: vercel(),  // Usamos el adaptador correcto para Vercel
 });
