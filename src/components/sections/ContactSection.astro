@@ -97,53 +97,26 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 <script type="module" is:inline>
   if (typeof window !== 'undefined') {
     // Inicializar EmailJS con la clave pública
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
-    // Función de validación del formulario
-    function validateForm(form) {
-      const firstName = form.firstName.value.trim();
-      const lastName = form.lastName.value.trim();
-      const email = form.email.value.trim();
-      const phone = form.phone.value.trim();
-      const message = form.message.value.trim();
-
-      if (!firstName || !lastName || !email || !phone || !message) {
-        alert('Please fill out all fields.');
-        return false;
-      }
-
-      // Validar el formato de email
-      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      if (!emailPattern.test(email)) {
-        alert('Please enter a valid email address.');
-        return false;
-      }
-
-      return true;
-    }
+    const publicKey = "{import.meta.env.VITE_EMAILJS_PUBLIC_KEY}";
+    const serviceId = "{import.meta.env.VITE_EMAILJS_SERVICE_ID}";
+    const templateId = "{import.meta.env.VITE_EMAILJS_TEMPLATE_ID}";
+    emailjs.init(publicKey);
 
     // Función para enviar el correo
     function sendEmail(event) {
       event.preventDefault();
       const form = document.getElementById('contactForm');
 
-      if (validateForm(form)) {
-        const emailjsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-        const emailjsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-        const emailjsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-
-console.log(emailjsPublicKey, emailjsServiceId, emailjsTemplateId);
-        // Enviar el formulario a través de emailjs
-        emailjs.sendForm(serviceId, templateId, form, publicKey)
-          .then(response => {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Message sent successfully!');
-          })
-          .catch(error => {
-            console.error('FAILED...', error);
-            alert('Error sending the message. Please try again.');
-          });
-      }
+      // Enviar el formulario a través de emailjs
+      emailjs.sendForm(serviceId, templateId, form, publicKey)
+        .then(response => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+        })
+        .catch(error => {
+          console.error('FAILED...', error);
+          alert('Error sending the message. Please try again.');
+        });
     }
 
     // Agregar el evento para el envío del formulario
