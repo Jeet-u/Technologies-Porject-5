@@ -7,7 +7,6 @@ import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
 import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
-// Define the variables that will be used in this component
 const title: string = "Contact us";
 const subTitle: string =
   "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
@@ -15,7 +14,42 @@ const formTitle: string = "Fill in the form below";
 const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 ---
 
-<!-- Contact Us -->
+<script type="module" is:inline>
+  import { init } from 'emailjs-com';
+
+  // No es necesario llamar init aquC- si la configuraciC3n ya estC! en las variables de entorno.
+
+  // Define la funciC3n para enviar el correo
+  function sendEmail(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('contactForm');
+
+    // Accediendo a las variables de entorno en Vercel
+    const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    // Enviando los datos del formulario con EmailJS
+    emailjs
+      .sendForm(serviceId, templateId, form, publicKey)
+      .then(response => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
+      })
+      .catch(error => {
+        console.error('FAILED...', error);
+        alert('Error sending the message. Please try again.');
+      });
+  }
+
+  // Adjuntar el evento de envC-o del formulario
+  window.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', sendEmail);
+  });
+</script>
+
 <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
   <div class="mx-auto max-w-2xl lg:max-w-5xl">
     <div class="text-center">
@@ -31,21 +65,19 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 
     <div class="mt-12 grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
       <div class="flex flex-col rounded-xl p-4 sm:p-6 lg:p-8">
-        <h2
-          class="mb-8 text-xl font-bold text-neutral-700 dark:text-neutral-300"
-        >
+        <h2 class="mb-8 text-xl font-bold text-neutral-700 dark:text-neutral-300">
           {formTitle}
         </h2>
-        <!-- Form for user input with various input fields.-->
-        <!-- Each field utilizes a different input component for the specific type of input (text, email, phone, and textarea)-->
-        <form id="contactForm" method="POST">
+
+        <!-- Form for user input with EmailJS integration -->
+        <form id="contactForm">
           <div class="grid gap-4">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <TextInput id="firstname" label="First Name" name="firstName" />
-              <TextInput id="lastname" label="Last Name" name="lastName" />
+              <TextInput id="firstName" label="First Name" name="firstName" />
+              <TextInput id="lastName" label="Last Name" name="lastName" />
             </div>
-            <EmailContactInput name="email" id="email" />
-            <PhoneInput name="phone" id="phone" />
+            <EmailContactInput id="email" name="email" />
+            <PhoneInput id="phone" name="phone" />
             <TextAreaInput id="message" label="Details" name="message" />
           </div>
         
@@ -55,7 +87,6 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
         </form>
       </div>
 
-      <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
         <ContactIconBlock
           heading="Knowledgebase"
@@ -97,40 +128,3 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
     </div>
   </div>
 </section>
-
-
-  <script>
-    async function submitForm(event: SubmitEvent) {
-      event.preventDefault();
-
-      const form = document.getElementById('contactForm') as HTMLFormElement;
-      if (form) {
-      
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        console.log('Datos enviados al servidor:', data);
-
-        try {
-          const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
-          });
-
-          const result = await response.json();
-          if (response.ok) {
-            alert('Message sent successfully!');
-            console.log('Respuesta del servidor:', result);
-          } else {
-            console.error('Error del servidor:', result);
-            alert(`Error: ${result.error}`);
-          }
-        } catch (error) {
-          console.error('Error en la solicitud:', error);
-        }
-      }
-    }
-
-    document.getElementById('contactForm')?.addEventListener('submit', submitForm);
-  </script>

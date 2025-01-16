@@ -1,7 +1,7 @@
 ---
-const { label = Astro.currentLocale === "fr" ? "E-mail" : "Email", id } = Astro.props;
-
-interface Props {
+  const { label, id, name } = Astro.props;
+  
+  interface Props {
   label?: string;
   name: string;
   id: string;

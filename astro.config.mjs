@@ -24,7 +24,7 @@ export default defineConfig({
 
   prefetch: true,
 
-  // Cambiar a 'static' para un sitio completamente estC!tico
+  // Cambiar a 'static' para un sitio completamente estático
   output: "static",
 
   adapter: vercel({
@@ -48,4 +48,12 @@ export default defineConfig({
       brotli: true,
     }),
   ],
+
+  vite: {
+    resolve: {
+      alias: {
+        'emailjs-com': 'emailjs-com',
+      },
+    },
+  },
 });
