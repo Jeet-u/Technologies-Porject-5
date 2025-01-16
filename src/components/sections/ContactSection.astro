@@ -91,15 +91,14 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
   </div>
 </section>
 
-<!-- Incluir el script del CDN de emailjs-com -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 
 <script type="module" is:inline>
   if (typeof window !== 'undefined') {
     // Inicializar EmailJS con la clave pública
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = 'AyYUYbI_6o9kX7-9Y';
+    const serviceId = 'service_j7xslcv';
+    const templateId = 'template_64g2qbj';
     
     emailjs.init(publicKey);
 

@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import dotenv from "dotenv";
+import emailjs from "@emailjs/browser"
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
@@ -11,7 +12,7 @@ dotenv.config();
 const env = loadEnv(process.env.NODE_ENV || "development", process.cwd(), "");
 
 // Log para verificar variables cargadas
-console.log("Modo de ejecución:", process.env.NODE_ENV || "development");
+console.log("Modo de ejecuciC3n:", process.env.NODE_ENV || "development");
 console.log("Variables de entorno cargadas:", env);
 
 export default defineConfig({
@@ -34,7 +35,7 @@ export default defineConfig({
 
   prefetch: true,
 
-  // Cambiar a 'static' para un sitio completamente estático
+  // Cambiar a 'static' para un sitio completamente estC!tico
   output: "static",
 
   adapter: vercel({
@@ -68,12 +69,11 @@ export default defineConfig({
     },
   },
 
-  // Añadir las variables cargadas desde loadEnv para su uso
+  // AC1adir las variables cargadas desde loadEnv para su uso
   server: {
-    // Ejemplo: Usa las variables de entorno si necesitas configurarlas en el servidor
     port: env.VITE_CUSTOM_PORT || 3000, // Personaliza el puerto si es necesario
   },
 });
 
-// Log para confirmar configuración completada
-console.log("Configuración de Astro cargada correctamente.");
+// Log para confirmar configuraciC3n completada
+console.log("ConfiguraciC3n de Astro cargada correctamente.");
