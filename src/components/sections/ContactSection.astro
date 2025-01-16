@@ -14,48 +14,10 @@ const formTitle: string = "Fill in the form below";
 const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 ---
 
-<script type="module" is:inline>
-  import { init } from 'emailjs-com';
-
-  // No es necesario llamar init aquC- si la configuraciC3n ya estC! en las variables de entorno.
-
-  // Define la funciC3n para enviar el correo
-  function sendEmail(event) {
-    event.preventDefault();
-
-    const form = document.getElementById('contactForm');
-
-    // Accediendo a las variables de entorno en Vercel
-    const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
-
-    // Enviando los datos del formulario con EmailJS
-    emailjs
-      .sendForm(serviceId, templateId, form, publicKey)
-      .then(response => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Message sent successfully!');
-      })
-      .catch(error => {
-        console.error('FAILED...', error);
-        alert('Error sending the message. Please try again.');
-      });
-  }
-
-  // Adjuntar el evento de envC-o del formulario
-  window.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', sendEmail);
-  });
-</script>
-
 <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
   <div class="mx-auto max-w-2xl lg:max-w-5xl">
     <div class="text-center">
-      <h1
-        class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
-      >
+      <h1 class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
         {title}
       </h1>
       <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
@@ -69,7 +31,7 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
           {formTitle}
         </h2>
 
-        <!-- Form for user input with EmailJS integration -->
+        <!-- Formulario para enviar los datos de contacto -->
         <form id="contactForm">
           <div class="grid gap-4">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -80,7 +42,7 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
             <PhoneInput id="phone" name="phone" />
             <TextAreaInput id="message" label="Details" name="message" />
           </div>
-        
+
           <div class="mt-4 grid">
             <AuthBtn title="Send Message" />
           </div>
@@ -128,3 +90,40 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
     </div>
   </div>
 </section>
+
+<!-- Incluir el script del CDN de emailjs-com -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+
+<script type="module" is:inline>
+  if (typeof window !== 'undefined') {
+    // Inicializar EmailJS con la clave pública
+    emailjs.init(import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY);
+
+    // Función para enviar el correo
+    function sendEmail(event) {
+      event.preventDefault();
+      const form = document.getElementById('contactForm');
+
+      const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      // Enviar el formulario a través de emailjs
+      emailjs.sendForm(serviceId, templateId, form, publicKey)
+        .then(response => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+        })
+        .catch(error => {
+          console.error('FAILED...', error);
+          alert('Error sending the message. Please try again.');
+        });
+    }
+
+    // Agregar el evento para el envío del formulario
+    window.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', sendEmail);
+    });
+  }
+</script>
